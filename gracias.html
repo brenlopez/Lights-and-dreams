@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lights and Dreams</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700;800&family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="container fixed-top">
+      <h1 id="logo">Lights and Dreams</h1>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light row">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav text-center ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#sobreMi">Sobre mi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#escena">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#servicio">Servicios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#precios">Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="gracias" class="container">
+      <h2>¡Su mensaje se envió con éxito!</h2>
+      <p>
+        En breve nos estaremos comunicando contigo para responder todas tus
+        preguntas.
+      </p>
+      <a href="index.html">Volver al inicio</a>
+    </section>
+    <footer class="container">
+      <a href="#">Lights and Dreams</a>
+      <p>Brenda Denisse Lopez - Lights and Dreams - Año 2021</p>
+      <ul>
+        <li>
+          <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+        </li>
+        <li>
+          <a href="https://es-la.facebook.com/" target="_blank">Facebook</a>
+        </li>
+        <li><a href="https://twitter.com/" target="_blank">Twitter</a></li>
+      </ul>
+    </footer>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script>
+      const btns = document.querySelectorAll(".nav-item");
+      const barra = document.querySelector(".navbar-collapse");
+      const cierre = new bootstrap.Collapse(barra, {
+        toggle: false,
+      });
+      btns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          if (barra.classList.contains("show")) {
+            cierre.toggle();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
